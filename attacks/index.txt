@@ -1,0 +1,33 @@
+// DOS --> Deniel of service
+// DDOS --> Destributed Deniel of service
+
+// when a server is busy and serve greater number of requests, then it denied other requests -->DOS
+
+// Brute force attack--> hacker tries combinations of email or passwords until login 
+
+
+
+//symmetric algorithms
+
+not easy to rotate 
+secret has to be shared with microservice and servers
+any one can issue jwt if secret key is leaked
+ckient side verfication not possible because we cant store secret key to client 
+
+
+
+
+
+// rs256
+
+two keys 1.sign the token 2.one is to validate the token(verify)
+
+10-100 times more security
+
+
+client request login then jwt is signed using pk
+and for microservices and severs we use public key to verify the token
+
+
+openssl genrsa -out private.pem 3072(bit)
+openssl rsa -in private.pem -pubout -out public.pem
